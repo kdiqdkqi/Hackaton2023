@@ -20,12 +20,7 @@ public class PlayerMovement : MonoBehaviour
         float zMovement = Input.GetAxis("Vertical");
         
 
-        Vector3 movement = transform.right * xMovement + transform.forward * zMovement;
-        if (!character.isGrounded)
-        {
-            gravity -= 4 * Time.deltaTime;
-            movement.y = gravity;
-        }
+        Vector3 movement = transform.right * xMovement + transform.forward * zMovement;   
         character.Move(movement*characterSpeed*Time.deltaTime);
           
     }

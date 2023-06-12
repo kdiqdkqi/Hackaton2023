@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Portail : MonoBehaviour
 {
+    public GameObject tp_out;
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +14,10 @@ public class Portail : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Hello");
+        player.transform.position = tp_out.transform.position;
         
     }
 }
