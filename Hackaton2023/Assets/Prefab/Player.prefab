@@ -206,7 +206,6 @@ GameObject:
   m_Component:
   - component: {fileID: 752105216826041814}
   - component: {fileID: 3189071431885716436}
-  - component: {fileID: 4477456299940475088}
   - component: {fileID: 3107330885434620841}
   m_Layer: 7
   m_Name: Player
@@ -230,7 +229,7 @@ Transform:
   - {fileID: 5388266090954342132}
   - {fileID: 7253342786405839459}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3189071431885716436
 CharacterController:
@@ -258,33 +257,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4477456299940475088
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917808344495576421}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &3107330885434620841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,3 +272,4 @@ MonoBehaviour:
   character: {fileID: 3189071431885716436}
   characterSpeed: 5
   gravity: 0
+  rb: {fileID: 0}
