@@ -24,18 +24,20 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = transform.right * xMovement + transform.forward * zMovement;
         if (!character.isGrounded)
         {
-            gravity -= 4 * Time.deltaTime;
             movement.y = gravity;
+            gravity -= 2 * Time.deltaTime;
+            
         }
         if (character.isGrounded)
         {
             gravity = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
+        if (Input.GetKeyDown(KeyCode.Space) && canJump == true && gravity <=0.01)
         {
-            Vector3 jump = transform.forward + transform.up * 2;
-            character.Move(jump);
+            ///Vector3 jump = transform.forward + transform.up * 3;
+            ///character.Move(jump);
+            gravity = 1;
         }
         character.Move(movement * characterSpeed * Time.deltaTime);
 
