@@ -5,6 +5,8 @@ using UnityEngine;
 public class Collide : MonoBehaviour
 {
     // Start is called before the first frame update
+    public string Tag;
+
     private void OnTriggerEnter(Collider other)
     {
 
@@ -13,7 +15,7 @@ public class Collide : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
-        if(other.CompareTag("Ammo"))
+        if(other.CompareTag(Tag)||other.CompareTag("Player"))
         { 
             Debug.Log("Hello");
         }

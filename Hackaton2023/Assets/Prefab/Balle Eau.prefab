@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5507703532865152961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2979489185758511603, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93db06bd80f94834295171a0e88a8825, type: 2}
+    - target: {fileID: 3628135281450721318, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_Name
+      value: Bullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628135281450721318, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_TagString
+      value: Eau
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112465392337615516, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140285909551192409, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93db06bd80f94834295171a0e88a8825, type: 2}
+    - target: {fileID: 8312599176132780598, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653552626961037452, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      propertyPath: m_Name
+      value: Balle Eau
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8653552626961037452, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6414943053503892392}
+    - targetCorrespondingSourceObject: {fileID: 8653552626961037452, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7498064859819739729}
+  m_SourcePrefab: {fileID: 100100000, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+--- !u!1 &3781004342010470221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8653552626961037452, guid: ff393e3200ec51c41975a6df392f4fbf, type: 3}
+  m_PrefabInstance: {fileID: 5507703532865152961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6414943053503892392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781004342010470221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521e1220119feab47848abd4a737bceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2.5
+--- !u!114 &-7498064859819739729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781004342010470221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37cbbcac9a223a64a8c355f09af49208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: Eau

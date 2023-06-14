@@ -10,8 +10,8 @@ public class WeaponSystem : MonoBehaviour
     public Transform shootPoint;
     public GameObject bullet;
     public float speed = 10f;
-    public AudioSource fireNoise;
-    public GameObject muzzleFlash;
+    
+   
     
 
 
@@ -34,9 +34,7 @@ public class WeaponSystem : MonoBehaviour
 
     void shoot()
     {
-        fireNoise.Play();
-        GameObject muzzleInstance = Instantiate(muzzleFlash, shootPoint.position, Quaternion.identity);
-        Destroy(muzzleInstance, 1f);
+        
         
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;

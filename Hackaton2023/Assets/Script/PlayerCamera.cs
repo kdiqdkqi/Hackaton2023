@@ -17,6 +17,14 @@ public class PlayerCamera : MonoBehaviour
 
     float xClamp;
 
+    
+
+    public GameObject weaponFire;
+    public GameObject weaponWater;
+    public GameObject weaponNature;
+    public int powerStage = 0;
+    public float arme = 1f;
+
     // Start is called before the first frame update
 
     void Start()
@@ -48,8 +56,42 @@ public class PlayerCamera : MonoBehaviour
 
         body.Rotate(Vector3.up * mouseXaxis);
 
+        if (powerStage >= 1 && Input.GetKeyDown("1") && arme != 1f)
+        {
+            Debug.Log("Eau");
+                weaponWater.SetActive(true);
+                weaponFire.SetActive(false);
+                weaponNature.SetActive(false);
+                arme = 1f;
+            
+        }
+        if (powerStage >= 2 && Input.GetKeyDown("2") && arme != 2f)
+            {
+            Debug.Log("Feu");
+                weaponFire.SetActive(true);
+                weaponWater.SetActive(false);
+                weaponNature.SetActive(false);
+                arme = 2f;
+
+            }
+            
+        
+        if (powerStage >= 3 && Input.GetKeyDown("3") && arme != 3f) 
+            {
+
+                weaponFire.SetActive(false);
+                weaponWater.SetActive(false);
+                weaponNature.SetActive(true);
+                arme = 3f;
+
+            }
 
 
     }
 
+
+
 }
+
+
+

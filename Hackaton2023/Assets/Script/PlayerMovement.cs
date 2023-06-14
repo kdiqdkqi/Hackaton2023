@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController character;
     public float characterSpeed = 20f;
     public float gravity;
+    public bool canJump = false;
 
     void Start()
     {
@@ -31,12 +32,20 @@ public class PlayerMovement : MonoBehaviour
             gravity = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
         {
             Vector3 jump = transform.forward + transform.up * 2;
             character.Move(jump);
         }
         character.Move(movement * characterSpeed * Time.deltaTime);
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Bottes"))
+        {
+            canJump = true;
+        }
     }
 }

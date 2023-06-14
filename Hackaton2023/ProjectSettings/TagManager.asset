@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bottes
+  - Ammo
+  - Eau
+  - Fire
+  - Nature
+  - Enemy
   layers:
   - Default
   - TransparentFX
