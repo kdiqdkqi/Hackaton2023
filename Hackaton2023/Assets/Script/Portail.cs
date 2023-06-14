@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Portail : MonoBehaviour
 {
-    public GameObject tp_out;
+    public GameObject TpOut;
     public GameObject player;
+    public AudioSource TpSound;
+    public AudioSource MapSong;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,9 @@ public class Portail : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hello");
-        player.transform.position = tp_out.transform.position;
+        player.transform.position = TpOut.transform.position;
+        TpSound.Play();
+        MapSong.Play();
         
     }
 }

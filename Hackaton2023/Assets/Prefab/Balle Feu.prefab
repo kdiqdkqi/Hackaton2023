@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ec0caab2a54a9d439bef6a21b15af45, type: 2}
+    - target: {fileID: 3701150232109039103, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb18c33338b5bbf42bdc385fd3e62f74, type: 3}
     - target: {fileID: 3781004342010470221, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
       propertyPath: m_Name
       value: Balle Feu
