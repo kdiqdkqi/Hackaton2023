@@ -10,6 +10,10 @@ TagManager:
   - Fire
   - Nature
   - Enemy
+  - Power1
+  - Power2
+  - Power3
+  - Floor
   layers:
   - Default
   - TransparentFX
