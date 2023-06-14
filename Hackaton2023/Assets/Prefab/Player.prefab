@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5388266090954342132}
   - component: {fileID: 1096359516418076960}
   - component: {fileID: 2249503308908769371}
-  - component: {fileID: 7492777255816983065}
+  - component: {fileID: 9061681444256546550}
   m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
@@ -176,7 +176,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2271591281122535533}
   m_Enabled: 1
---- !u!114 &7492777255816983065
+--- !u!114 &9061681444256546550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,16 +185,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2271591281122535533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d86d2fd6f0ed94458c7177f38e9bc7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f32f1079ec212143a70ab26ea73d5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 752105216826041814}
   sensitivity: 500
-  xClamp: 0
-  weaponType1: {fileID: 0}
-  weaponType2: {fileID: 0}
-  weaponType3: {fileID: 0}
-  weaponType4: {fileID: 0}
+  weaponFire: {fileID: 6184691566296089065, guid: 683789dda3c12b84d8a8f277858c6b13, type: 3}
+  weaponWater: {fileID: 4891201997781095837, guid: 3cc8551dafe4f3d44868047597da51a4, type: 3}
+  weaponNature: {fileID: 5275864650827115694, guid: 8f2d2103677c54441b11e0208201f246, type: 3}
+  powerStage: 0
   arme: 1
 --- !u!1 &3917808344495576421
 GameObject:
@@ -206,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752105216826041814}
   - component: {fileID: 3189071431885716436}
-  - component: {fileID: 3107330885434620841}
+  - component: {fileID: 1961406857780976358}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -257,7 +256,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3107330885434620841
+--- !u!114 &1961406857780976358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,10 +265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3917808344495576421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7221e52e0fb3a854eb1f42069ea54291, type: 3}
+  m_Script: {fileID: 11500000, guid: bfac71f1c4b73974197244683cee0045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3189071431885716436}
-  characterSpeed: 5
+  characterSpeed: 20
   gravity: 0
-  rb: {fileID: 0}
+  canJump: 0
