@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject weaponNature;
     public int powerStage = 0;
     public float arme = 1f;
+    public GameObject tpFinal;
     
     
 
@@ -116,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
         {
             powerStage = 3;
             Destroy(other.gameObject);
+            tpFinal.SetActive(true);
+
         }
         
         

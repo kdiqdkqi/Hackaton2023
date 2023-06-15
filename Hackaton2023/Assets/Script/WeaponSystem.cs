@@ -12,10 +12,7 @@ public class WeaponSystem : MonoBehaviour
     public float speed = 10f;
     
    
-    
-
-
-
+ 
     void Start()
     {
         
