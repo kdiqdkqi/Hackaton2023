@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using static UnityEngine.Random;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class BossColorChange : MonoBehaviour
 {   
@@ -16,6 +17,8 @@ public class BossColorChange : MonoBehaviour
     public Material[] material;
     public int element;
     Renderer rend;
+    public int Health;
+    [SerializeField] private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,8 @@ public class BossColorChange : MonoBehaviour
 
         elementName = "text";
     }
- 
+
+
     void Update()
     {
         Hp -= Time.deltaTime; 
@@ -43,25 +47,33 @@ public class BossColorChange : MonoBehaviour
             elementName = material[randomNumber].name;
             ComparedHp = Hp - Random.Range(5, 8);
             textVisible = true;
+            gameObject.name = material[randomNumber].name;
         }
 
         if (textVisible == true)
         {
-            textElement.gameObject.SetActive(true);
-            textElement.text = "Element du boss : " + elementName;
 
             visibleTimer -= Time.deltaTime;
 
-        if (visibleTimer <= 1f)
-        {
-            textVisible = false;
-            textElement.gameObject.SetActive(false);
-            visibleTimer = 4f;
+            if (visibleTimer <= 1f)
+            {
+                textVisible = false;
+                textElement.gameObject.SetActive(false);
+                visibleTimer = 4f;
         }
-
         }
-
-
-        
     }
+        public void OnTriggerEnter(Collider other)
+        {
+
+            if (other.CompareTag(gameObject.name))
+            {
+                slider.value -= 0.05f;
+                Debug.Log("Triggered by Enemy");
+            }
+            if (slider.value <= 0f)
+        {
+            Destroy(gameObject);
+        }
+        }
 }

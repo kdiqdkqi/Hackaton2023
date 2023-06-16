@@ -31,7 +31,7 @@ public class Enemy2 : MonoBehaviour
         if (!attacked)
         {
             Rigidbody bulletInstance = Instantiate(bullet, shootPoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            bulletInstance.AddForce(transform.forward * 10f, ForceMode.Impulse);
+            bulletInstance.AddForce(transform.forward * 50f+transform.up *-2.5f, ForceMode.Impulse);
             
             attacked = true;
             Invoke(nameof(Reset),attackTime);
@@ -44,50 +44,10 @@ public class Enemy2 : MonoBehaviour
     }
 
 
-    private void Searchpoint()
-    {
-        float randPointZ = Random.Range(-pointRange, pointRange);
-        float randPointx = Random.Range(-pointRange, pointRange);
 
-        specialPoint = new Vector3(transform.position.x + randPointx,transform.position.y,transform.position.z + randPointZ);
 
-        if (Physics.Raycast(specialPoint, -transform.up, 2f, groundLayer))
-        {
-            isPointset = true;
+   
 
-        }
-
-    }
-
-    private void Patrol()
-    {
-        if (!isPointset)
-        {
-            Searchpoint();
-
-        }
-        if (isPointset)
-        {
-            agent.SetDestination(specialPoint);
-        }
-
-        Vector3 distance = transform.position - specialPoint;
-
-        if (distance.magnitude < 1f)
-        {
-            isPointset= false;
-        }
-    }
-
-    
-
-    private void FollowPlayer()
-    {
-        agent.SetDestination(player.position);
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = 10f;
-
-    }
 
     private void Awake()
     {
@@ -100,16 +60,8 @@ public class Enemy2 : MonoBehaviour
     {
         inVisionRange = Physics.CheckSphere(transform.position, visionRange, playerLayer);
         inAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
-        if (!inVisionRange && !inAttackRange)
-        {
-            Patrol();
-
-        }
-        if (inVisionRange && !inAttackRange)
-        {
-            FollowPlayer();
-            
-        }
+        
+        
         if (inVisionRange && inAttackRange)
         {
             Attack();

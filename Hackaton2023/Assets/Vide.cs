@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portail : MonoBehaviour
+public class Vide : MonoBehaviour
 {
-    public GameObject tp_out;
-    public GameObject player;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +15,7 @@ public class Portail : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Hello");
-            player.transform.position = tp_out.transform.position;
-            PlayerMovement.Instance.checkPoint = tp_out;
-
-
+            other.transform.position = PlayerMovement.Instance.checkPoint.transform.position;
         }
-        
-        
     }
 }

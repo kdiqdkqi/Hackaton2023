@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
-public class Bullet2 : MonoBehaviour
+public class Rocher : MonoBehaviour
 {
-
+    // Start is called before the first frame update
     public float timer;
     void Start()
     {
 
     }
-    
+
 
     // Update is called once per frame
     void Update()
@@ -28,7 +27,14 @@ public class Bullet2 : MonoBehaviour
 
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerMovement.Instance.pv -= 1f;
+            Destroy(gameObject);
+        }
+    }
 
 
 }

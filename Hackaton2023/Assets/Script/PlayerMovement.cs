@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
     public CharacterController character;
     public float characterSpeed = 20f;
     public float gravity;
@@ -14,17 +15,24 @@ public class PlayerMovement : MonoBehaviour
     public int powerStage = 0;
     public float arme = 1f;
     public GameObject tpFinal;
+    public float pv = 3f;
+    public GameObject checkPoint;
     
     
 
     void Start()
     {
-
+        Instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(pv <= 0f)
+        {
+            this.gameObject.transform.position = checkPoint.transform.position;
+            pv = 3f;
+        }
         float xMovement = Input.GetAxis("Horizontal");
         float zMovement = Input.GetAxis("Vertical");
 
@@ -37,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
             movement.y = gravity;
             gravity -= 2 * Time.deltaTime;
             
-
         }
 
         if (gravity <-2)

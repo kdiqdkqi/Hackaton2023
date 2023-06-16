@@ -19,7 +19,13 @@ public class Reward : MonoBehaviour
                 GameObject.Find("Tree5") == null && GameObject.Find("Tree6") == null &&
                 GameObject.Find("Tree7") == null && GameObject.Find("Tree8") == null &&
                 GameObject.Find("Tree9") == null)
+            {
                 chest.SetActive(true);
+                Destroy(gameObject);
+
+            }
+                
+                
 
         }
 
