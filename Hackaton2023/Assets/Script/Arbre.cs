@@ -13,7 +13,7 @@ public class Arbre : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Fire"))
+        if (other.CompareTag("Feu"))
         {
             Destroy(gameObject);
         }

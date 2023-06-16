@@ -14,6 +14,7 @@ TagManager:
   - Power2
   - Power3
   - Floor
+  - Feu
   layers:
   - Default
   - TransparentFX

@@ -26,7 +26,7 @@ public class BossColorChange : MonoBehaviour
         rend.enabled = true;
         rend.sharedMaterial = material[0];
 
-        ComparedHp = Hp - Random.Range(5, 10);
+        ComparedHp = Hp - Random.Range(1, 3);
 
         textVisible = false;
         visibleTimer = 4f;
@@ -39,13 +39,19 @@ public class BossColorChange : MonoBehaviour
     {
         Hp -= Time.deltaTime; 
 
+        if (Hp <= 0 ) 
+        {
+            Hp = 100;
+            ComparedHp = Hp - Random.Range(2, 4);
+        }
+
         if (Hp < ComparedHp)
         {
             int randomNumber = Random.Range(0, material.Count());
             rend.sharedMaterial = material[randomNumber];
             element = randomNumber;
             elementName = material[randomNumber].name;
-            ComparedHp = Hp - Random.Range(5, 8);
+            ComparedHp = Hp - Random.Range(2, 4);
             textVisible = true;
             gameObject.name = material[randomNumber].name;
         }

@@ -6,6 +6,8 @@ public class Portail : MonoBehaviour
 {
     public GameObject tp_out;
     public GameObject player;
+    public AudioSource TpSound;
+    public AudioSource MapSong;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,8 @@ public class Portail : MonoBehaviour
             Debug.Log("Hello");
             player.transform.position = tp_out.transform.position;
             PlayerMovement.Instance.checkPoint = tp_out;
-
+            TpSound.Play();
+            MapSong.Play();
 
         }
         

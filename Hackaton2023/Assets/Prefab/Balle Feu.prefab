@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: Tag
       value: Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 1334288317705538256, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e38935c12c4963f4a9c7c193552f24d5, type: 3}
     - target: {fileID: 3420535708607184536, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -22,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3781004342010470221, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
       propertyPath: m_TagString
-      value: Fire
+      value: Feu
       objectReference: {fileID: 0}
     - target: {fileID: 7293032651732444722, guid: 3c5648b9c30707d4ba803dfbc267b5da, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: Tag
       value: Nature
       objectReference: {fileID: 0}
+    - target: {fileID: 1487650904367314363, guid: 085f86934e06b7941a9e1aad8db9e688, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d6f26fcfba1adc4eb69fe5b83602aa1, type: 3}
     - target: {fileID: 2979489185758511603, guid: 085f86934e06b7941a9e1aad8db9e688, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
